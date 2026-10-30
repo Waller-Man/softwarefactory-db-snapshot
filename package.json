@@ -1,0 +1,14 @@
+{
+  "name": "softwarefactory-database-snapshot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "info": "node scripts/snapshot.ts info",
+    "check": "node scripts/snapshot.ts check",
+    "import:snapshot": "node scripts/snapshot.ts import --apply",
+    "verify": "node scripts/snapshot.ts verify",
+    "test": "node --test scripts/backup-restore.test.ts"
+  }
+}

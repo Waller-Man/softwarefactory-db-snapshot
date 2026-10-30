@@ -1,0 +1,40 @@
+{
+  "verifiedAt": "2026-10-30T17:37:25.076Z",
+  "snapshot": "data/current/graph-backup.json",
+  "fileSha256": "15b5b296bcd7ab6baf9f6543435201cefbb909b2f9f311607aeda72464cdfa89",
+  "sourceExport": {
+    "endpoint": "http://127.0.0.1:18080",
+    "graph": "DEFAULT/hugegraph",
+    "consecutiveCompleteReadsMatched": true,
+    "checksumVerified": true,
+    "writes": 0
+  },
+  "liveSourceReadback": {
+    "entrypoint": "导入快照.ps1 -VerifyOnly",
+    "allObjectsMatch": true,
+    "missingSchema": 0,
+    "missingVertices": 0,
+    "missingEdges": 0,
+    "writes": 0
+  },
+  "automatedTests": {
+    "command": "node --test scripts/backup-restore.test.ts",
+    "passed": 7,
+    "failed": 0,
+    "covers": [
+      "分页导出与 SHA-256 校验",
+      "拒绝导出期间变化的数据",
+      "主键节点内部 ID 重映射及重复导入零写入",
+      "Schema、数据冲突及额外对象在写入前拒绝",
+      "中断后继续导入",
+      "只读客户端拒绝写入及不支持结构拒绝",
+      "本次真实快照在模拟空图完整导入及重复导入"
+    ]
+  },
+  "limitations": [
+    "未向源数据库导入或修改数据",
+    "未在第二个真实 HugeGraph 实例执行恢复",
+    "导出不是事务级原子快照",
+    "认证配置和 DSH 插件/执行产物不属于快照范围"
+  ]
+}

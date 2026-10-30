@@ -1,0 +1,2051 @@
+{
+  "format": "softwarefactory-hugegraph-rest-v1",
+  "source": {
+    "endpoint": "http://127.0.0.1:18080",
+    "graph": "/graphspaces/DEFAULT/graphs/hugegraph",
+    "serverVersionDeclared": "1.7.0"
+  },
+  "startedAt": "2026-10-30T17:34:31.530Z",
+  "completedAt": "2026-10-30T17:34:31.609Z",
+  "dataSha256": "09d6c496599fb81537d85378ef8ec5a18bae24af72901e86640b93e59cc17c50",
+  "consistency": "Two consecutive complete paginated reads matched; not an atomic transaction snapshot.",
+  "includes": [
+    "propertykeys",
+    "vertexlabels",
+    "edgelabels",
+    "indexlabels",
+    "vertices",
+    "edges"
+  ],
+  "excludes": [
+    "authentication/users/roles/passwords",
+    "Docker/server configuration",
+    "graph variables",
+    "external code and artifact files",
+    "task history"
+  ],
+  "counts": {
+    "schema": {
+      "propertykeys": 21,
+      "vertexlabels": 4,
+      "edgelabels": 3,
+      "indexlabels": 3
+    },
+    "vertices": {
+      "Agent": 51,
+      "AgentVersion": 2,
+      "Capability": 18,
+      "FieldGroup": 8
+    },
+    "edges": {
+      "HAS_AGENT": 51,
+      "HAS_CHILD": 17,
+      "HAS_VERSION": 2
+    },
+    "totalVertices": 79,
+    "totalEdges": 70,
+    "fieldGroups": 8,
+    "fieldDefinitions": 19
+  },
+  "data": {
+    "schema": {
+      "propertykeys": [
+        {
+          "id": 1,
+          "name": "agent_id",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.739"
+          }
+        },
+        {
+          "id": 11,
+          "name": "constraints_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.849"
+          }
+        },
+        {
+          "id": 12,
+          "name": "cost_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.855"
+          }
+        },
+        {
+          "id": 3,
+          "name": "description",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.775"
+          }
+        },
+        {
+          "id": 21,
+          "name": "developer",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-29 06:00:10.376"
+          }
+        },
+        {
+          "id": 18,
+          "name": "display_order",
+          "data_type": "INT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.898"
+          }
+        },
+        {
+          "id": 7,
+          "name": "dsh_ref",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.815"
+          }
+        },
+        {
+          "id": 13,
+          "name": "effect_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.863"
+          }
+        },
+        {
+          "id": 17,
+          "name": "fields_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.891"
+          }
+        },
+        {
+          "id": 16,
+          "name": "group_id",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.885"
+          }
+        },
+        {
+          "id": 8,
+          "name": "input_schema",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.824"
+          }
+        },
+        {
+          "id": 22,
+          "name": "intermediate_artifacts_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-29 06:24:40.467"
+          }
+        },
+        {
+          "id": 6,
+          "name": "invoke_kind",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.804"
+          }
+        },
+        {
+          "id": 19,
+          "name": "model_dependencies_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-27 08:56:07.809"
+          }
+        },
+        {
+          "id": 2,
+          "name": "name",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.764"
+          }
+        },
+        {
+          "id": 20,
+          "name": "object_categories_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-27 08:56:07.867"
+          }
+        },
+        {
+          "id": 9,
+          "name": "output_schema",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.834"
+          }
+        },
+        {
+          "id": 10,
+          "name": "performance_evidence_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.841"
+          }
+        },
+        {
+          "id": 14,
+          "name": "selection_policy_json",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.870"
+          }
+        },
+        {
+          "id": 5,
+          "name": "status",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "allowed_values": [
+              "draft",
+              "enabled",
+              "disabled",
+              "able"
+            ],
+            "~create_time": "2026-10-17 10:40:09.795"
+          }
+        },
+        {
+          "id": 4,
+          "name": "version",
+          "data_type": "TEXT",
+          "cardinality": "SINGLE",
+          "aggregate_type": "NONE",
+          "write_type": "OLTP",
+          "properties": [],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.785"
+          }
+        }
+      ],
+      "vertexlabels": [
+        {
+          "id": 2,
+          "name": "Agent",
+          "id_strategy": "PRIMARY_KEY",
+          "primary_keys": [
+            "agent_id"
+          ],
+          "nullable_keys": [],
+          "index_labels": [
+            "idx_agent_name"
+          ],
+          "properties": [
+            "agent_id",
+            "name",
+            "description"
+          ],
+          "status": "CREATED",
+          "ttl": 0,
+          "enable_label_index": true,
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.921"
+          }
+        },
+        {
+          "id": 3,
+          "name": "AgentVersion",
+          "id_strategy": "CUSTOMIZE_STRING",
+          "primary_keys": [],
+          "nullable_keys": [
+            "model_dependencies_json",
+            "description",
+            "object_categories_json",
+            "developer",
+            "invoke_kind",
+            "intermediate_artifacts_json",
+            "dsh_ref",
+            "performance_evidence_json",
+            "constraints_json",
+            "cost_json",
+            "effect_json",
+            "selection_policy_json"
+          ],
+          "index_labels": [
+            "idx_agent_version_status"
+          ],
+          "properties": [
+            "description",
+            "version",
+            "status",
+            "invoke_kind",
+            "dsh_ref",
+            "input_schema",
+            "output_schema",
+            "performance_evidence_json",
+            "constraints_json",
+            "cost_json",
+            "effect_json",
+            "selection_policy_json",
+            "model_dependencies_json",
+            "object_categories_json",
+            "developer",
+            "intermediate_artifacts_json"
+          ],
+          "status": "CREATED",
+          "ttl": 0,
+          "enable_label_index": true,
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.928"
+          }
+        },
+        {
+          "id": 1,
+          "name": "Capability",
+          "id_strategy": "CUSTOMIZE_STRING",
+          "primary_keys": [],
+          "nullable_keys": [
+            "selection_policy_json"
+          ],
+          "index_labels": [
+            "idx_capability_name"
+          ],
+          "properties": [
+            "name",
+            "selection_policy_json"
+          ],
+          "status": "CREATED",
+          "ttl": 0,
+          "enable_label_index": true,
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.912"
+          }
+        },
+        {
+          "id": 6,
+          "name": "FieldGroup",
+          "id_strategy": "PRIMARY_KEY",
+          "primary_keys": [
+            "group_id"
+          ],
+          "nullable_keys": [],
+          "index_labels": [],
+          "properties": [
+            "group_id",
+            "fields_json",
+            "name",
+            "display_order"
+          ],
+          "status": "CREATED",
+          "ttl": 0,
+          "enable_label_index": true,
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.951"
+          }
+        }
+      ],
+      "edgelabels": [
+        {
+          "id": 2,
+          "name": "HAS_AGENT",
+          "edgelabel_type": "NORMAL",
+          "source_label": "Capability",
+          "target_label": "Agent",
+          "links": [
+            {
+              "Capability": "Agent"
+            }
+          ],
+          "frequency": "SINGLE",
+          "sort_keys": [],
+          "nullable_keys": [],
+          "index_labels": [],
+          "properties": [],
+          "status": "CREATED",
+          "ttl": 0,
+          "enable_label_index": false,
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.986"
+          }
+        },
+        {
+          "id": 1,
+          "name": "HAS_CHILD",
+          "edgelabel_type": "NORMAL",
+          "source_label": "Capability",
+          "target_label": "Capability",
+          "links": [
+            {
+              "Capability": "Capability"
+            }
+          ],
+          "frequency": "SINGLE",
+          "sort_keys": [],
+          "nullable_keys": [],
+          "index_labels": [],
+          "properties": [],
+          "status": "CREATED",
+          "ttl": 0,
+          "enable_label_index": false,
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.970"
+          }
+        },
+        {
+          "id": 3,
+          "name": "HAS_VERSION",
+          "edgelabel_type": "NORMAL",
+          "source_label": "Agent",
+          "target_label": "AgentVersion",
+          "links": [
+            {
+              "Agent": "AgentVersion"
+            }
+          ],
+          "frequency": "SINGLE",
+          "sort_keys": [],
+          "nullable_keys": [],
+          "index_labels": [],
+          "properties": [],
+          "status": "CREATED",
+          "ttl": 0,
+          "enable_label_index": false,
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:09.992"
+          }
+        }
+      ],
+      "indexlabels": [
+        {
+          "id": 2,
+          "name": "idx_agent_name",
+          "base_type": "VERTEX_LABEL",
+          "base_value": "Agent",
+          "index_type": "SECONDARY",
+          "fields": [
+            "name"
+          ],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:10.687"
+          }
+        },
+        {
+          "id": 3,
+          "name": "idx_agent_version_status",
+          "base_type": "VERTEX_LABEL",
+          "base_value": "AgentVersion",
+          "index_type": "SECONDARY",
+          "fields": [
+            "status"
+          ],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:10.727"
+          }
+        },
+        {
+          "id": 1,
+          "name": "idx_capability_name",
+          "base_type": "VERTEX_LABEL",
+          "base_value": "Capability",
+          "index_type": "SECONDARY",
+          "fields": [
+            "name"
+          ],
+          "status": "CREATED",
+          "user_data": {
+            "~create_time": "2026-10-17 10:40:10.044"
+          }
+        }
+      ]
+    },
+    "vertices": [
+      {
+        "id": "2:agent`:activity-diagram-modeling",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:activity-diagram-modeling",
+          "name": "活动图建模",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:baseline-management",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:baseline-management",
+          "name": "基线管理",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:business-rule-change-identification",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:business-rule-change-identification",
+          "name": "业务规则变更识别",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:business-rule-driven-specification-evolution",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:business-rule-driven-specification-evolution",
+          "name": "基于业务规则变更的规约演化",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:business-rules-to-software-requirements",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:business-rules-to-software-requirements",
+          "name": "基于业务规则的软件需求生成",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:change-impact-analysis",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:change-impact-analysis",
+          "name": "变更影响分析",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:change-tracking",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:change-tracking",
+          "name": "变更追踪",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:data-flow-modeling",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:data-flow-modeling",
+          "name": "数据流图建模",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:difference-comparison",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:difference-comparison",
+          "name": "差异对比",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:document-based-potential-change-source",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:document-based-potential-change-source",
+          "name": "基于需求文档的可能变更源识别",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:document-content-generation",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:document-content-generation",
+          "name": "内容生成",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:document-format-polishing",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:document-format-polishing",
+          "name": "格式美化",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:document-parsing",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:document-parsing",
+          "name": "文档解析",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:document-splitting",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:document-splitting",
+          "name": "文档拆分",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:document-structure-completion",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:document-structure-completion",
+          "name": "结构补全",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:document-structure-planning",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:document-structure-planning",
+          "name": "结构规划",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:entity-relationship-modeling",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:entity-relationship-modeling",
+          "name": "E-R图建模",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:environment-driven-specification-evolution",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:environment-driven-specification-evolution",
+          "name": "基于外部环境变化的规约演化",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:exception-scenario-completion",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:exception-scenario-completion",
+          "name": "异常场景补全",
+          "description": "【虚拟测试】模拟识别并补全软件需求中的异常与失败路径，包括非法输入、权限拒绝、依赖服务失败、超时、重复请求，以及相应的错误反馈、恢复和补偿要求。重点完善正常流程偏离预期时的处理需求，不以正常业务功能及 CRUD 闭环补全为主要目标。"
+        }
+      },
+      {
+        "id": "2:agent`:external-environment-change-identification",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:external-environment-change-identification",
+          "name": "外部环境变化识别",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:f36-review-assistant",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:f36-review-assistant",
+          "name": "F36 评审助手智能体",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:f37-compliance-review",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:f37-compliance-review",
+          "name": "F37 合规审查智能体",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:feedforward-feedback-fdir-requirements",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:feedforward-feedback-fdir-requirements",
+          "name": "基于前馈-反馈控制的FDIR需求生成",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:flowchart-generation",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:flowchart-generation",
+          "name": "流程图生成",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:functional-logic-completion",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:functional-logic-completion",
+          "name": "需求功能逻辑补全",
+          "description": "根据用户描述的软件系统及需求，结合用例、实体关系与 CRUD 缺口分析进行迭代需求补全，生成软件需求文档。"
+        }
+      },
+      {
+        "id": "2:agent`:functional-safety-coverage-check",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:functional-safety-coverage-check",
+          "name": "功能安全覆盖完整性检查",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:functional-scenario-coverage-check",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:functional-scenario-coverage-check",
+          "name": "功能场景覆盖完整性检查",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:high-level-software-requirements-traceability-network",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:high-level-software-requirements-traceability-network",
+          "name": "高层需求-软件需求追溯关系网络建立",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:human-safety-requirements-completion",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:human-safety-requirements-completion",
+          "name": "人身安全需求补全推荐",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:information-security-coverage-check",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:information-security-coverage-check",
+          "name": "信息安全覆盖完整性检查",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:information-security-requirements-completion",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:information-security-requirements-completion",
+          "name": "信息安全需求补全推荐",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:invalid-content-filtering",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:invalid-content-filtering",
+          "name": "无效过滤",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:io-adaptation",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:io-adaptation",
+          "name": "输入输出适配",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:logical-conflict-detection",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:logical-conflict-detection",
+          "name": "逻辑冲突检测",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:multi-source-specification-change-merge",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:multi-source-specification-change-merge",
+          "name": "多源需求规约变更融合",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:performance-coverage-check",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:performance-coverage-check",
+          "name": "性能覆盖完整性检查",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:reliability-coverage-check",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:reliability-coverage-check",
+          "name": "可靠性覆盖完整性检查",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:reliability-requirements-completion",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:reliability-requirements-completion",
+          "name": "可靠性需求补全推荐",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:requirements-clarification",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:requirements-clarification",
+          "name": "需求澄清",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:requirements-extraction",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:requirements-extraction",
+          "name": "需求抽取",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:requirements-information-extraction-fusion",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:requirements-information-extraction-fusion",
+          "name": "需求信息提取与融合",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:requirements-relationship-identification",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:requirements-relationship-identification",
+          "name": "需求关系识别",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:semantic-conflict-detection",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:semantic-conflict-detection",
+          "name": "语义冲突检测",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:sequence-diagram-modeling",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:sequence-diagram-modeling",
+          "name": "顺序图建模",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:system-requirements-to-software-requirements",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:system-requirements-to-software-requirements",
+          "name": "基于系统需求的软件需求生成",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:terminology-unification",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:terminology-unification",
+          "name": "术语统一",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:traceable-document-preprocessing",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:traceable-document-preprocessing",
+          "name": "需求文档拆分",
+          "description": "将 PDF、DOCX、XLSX、XLSM 文档或需求文本转换为 Markdown，再执行章节标准化、语义分块、校验、需求目录组织、图片跟随及关系/汇总报告生成；由 DSH 主聊天 Agent 通过 split_requirement_document 等四个业务 Tool 调用，每次任务固定发起会话的工作区与模型，产物写入 <DSH工作区>/outputs/req-split/<runId>/。"
+        }
+      },
+      {
+        "id": "2:agent`:use-case-modeling",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:use-case-modeling",
+          "name": "用例模型建模",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:user-requirements-change-identification",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:user-requirements-change-identification",
+          "name": "用户需求变更识别",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:user-requirements-driven-specification-evolution",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:user-requirements-driven-specification-evolution",
+          "name": "基于用户需求变更的规约演化",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "2:agent`:user-requirements-to-software-requirements",
+        "label": "Agent",
+        "type": "vertex",
+        "properties": {
+          "agent_id": "agent:user-requirements-to-software-requirements",
+          "name": "基于用户需求的软件需求生成",
+          "description": "待完善"
+        }
+      },
+      {
+        "id": "6:applicability_environment",
+        "label": "FieldGroup",
+        "type": "vertex",
+        "properties": {
+          "group_id": "applicability_environment",
+          "fields_json": "[{\"field_id\":\"runtime_constraints\",\"name\":\"适用与运行条件\",\"meaning\":\"适用范围及运行环境条件，缺省不代表条件已满足\",\"data_type\":\"json\",\"required\":false,\"display_order\":10,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"constraints_json\"}]},{\"field_id\":\"model_dependencies\",\"name\":\"模型依赖\",\"meaning\":\"本版本声明的模型名称及厂商；普通JSON属性，不建立模型节点。实际执行模型由DSH配置决定。\",\"data_type\":\"json\",\"required\":false,\"display_order\":20,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"model_dependencies_json\"}],\"required_when\":\"存在实际模型依赖时填写\"}]",
+          "name": "适用与环境",
+          "display_order": 40
+        }
+      },
+      {
+        "id": "6:cost",
+        "label": "FieldGroup",
+        "type": "vertex",
+        "properties": {
+          "group_id": "cost",
+          "fields_json": "[{\"field_id\":\"runtime_cost\",\"name\":\"运行代价\",\"meaning\":\"资源消耗及运行成本；无数据时省略\",\"data_type\":\"json\",\"required\":false,\"display_order\":10,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"cost_json\"}]}]",
+          "name": "代价类",
+          "display_order": 70
+        }
+      },
+      {
+        "id": "6:effectiveness",
+        "label": "FieldGroup",
+        "type": "vertex",
+        "properties": {
+          "group_id": "effectiveness",
+          "fields_json": "[{\"field_id\":\"task_effect\",\"name\":\"任务效果\",\"meaning\":\"任务完成质量及效果指标；无数据时省略\",\"data_type\":\"json\",\"required\":false,\"display_order\":10,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"effect_json\"}]}]",
+          "name": "效果类",
+          "display_order": 80
+        }
+      },
+      {
+        "id": "6:execution_invocation",
+        "label": "FieldGroup",
+        "type": "vertex",
+        "properties": {
+          "group_id": "execution_invocation",
+          "fields_json": "[{\"field_id\":\"invoke_kind\",\"name\":\"调用方式\",\"meaning\":\"DSH能够识别的调用方式，不复制DSH配置\",\"data_type\":\"string\",\"required\":false,\"display_order\":10,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"invoke_kind\"}],\"required_when\":\"真实执行前必须填写并验证DSH绑定\"},{\"field_id\":\"invoke_entry\",\"name\":\"调用入口\",\"meaning\":\"该版本在DSH中的可解析执行引用，不保存凭据\",\"data_type\":\"string\",\"required\":false,\"display_order\":20,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"dsh_ref\"}],\"required_when\":\"真实执行前必须填写并验证DSH绑定\"}]",
+          "name": "可执行与调用",
+          "display_order": 20
+        }
+      },
+      {
+        "id": "6:functionality",
+        "label": "FieldGroup",
+        "type": "vertex",
+        "properties": {
+          "group_id": "functionality",
+          "fields_json": "[{\"field_id\":\"agent_capability\",\"name\":\"Agent能力描述\",\"meaning\":\"能力描述及所属能力分类\",\"data_type\":\"composite\",\"required\":true,\"display_order\":10,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"Agent\",\"property\":\"description\"},{\"kind\":\"relation\",\"edge_label\":\"HAS_AGENT\",\"direction\":\"IN\",\"target_label\":\"Capability\"}]},{\"field_id\":\"object_categories\",\"name\":\"处理对象类别\",\"meaning\":\"本版本声明的处理对象类别数组；普通JSON属性，不建立ArtifactType节点\",\"data_type\":\"json\",\"required\":true,\"display_order\":20,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"object_categories_json\"}]},{\"field_id\":\"input_specification\",\"name\":\"输入规格\",\"meaning\":\"本版本完整输入JSON Schema，不建立ACCEPTS关系\",\"data_type\":\"json_schema\",\"required\":true,\"display_order\":30,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"input_schema\"}]},{\"field_id\":\"output_specification\",\"name\":\"输出规格\",\"meaning\":\"本版本完整输出规格或产物声明，不建立PRODUCES关系\",\"data_type\":\"json_schema\",\"required\":true,\"display_order\":40,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"output_schema\"}]},{\"field_id\":\"intermediate_artifacts\",\"name\":\"中间产物\",\"meaning\":\"本版本中间产物的名称、文件类型和格式声明，不保存每次运行的文件路径\",\"data_type\":\"json\",\"required\":false,\"display_order\":50,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"intermediate_artifacts_json\"}]},{\"field_id\":\"version_description\",\"name\":\"版本能力描述\",\"meaning\":\"本AgentVersion独立的具体能力、范围和特点；不继承或自动复制Agent.description，也不回写逻辑Agent描述\",\"data_type\":\"string\",\"required\":false,\"display_order\":15,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"description\"}]}]",
+          "name": "功能类",
+          "display_order": 60
+        }
+      },
+      {
+        "id": "6:identity_governance",
+        "label": "FieldGroup",
+        "type": "vertex",
+        "properties": {
+          "group_id": "identity_governance",
+          "fields_json": "[{\"field_id\":\"agent_id\",\"name\":\"agentID\",\"meaning\":\"跨版本稳定的逻辑Agent标识，不是运行SessionId\",\"data_type\":\"string\",\"required\":true,\"display_order\":10,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"Agent\",\"property\":\"agent_id\"}]},{\"field_id\":\"agent_name\",\"name\":\"agent名称\",\"meaning\":\"逻辑Agent的展示名称\",\"data_type\":\"string\",\"required\":true,\"display_order\":20,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"Agent\",\"property\":\"name\"}]},{\"field_id\":\"agent_version\",\"name\":\"版本\",\"meaning\":\"所属Agent的具体版本号\",\"data_type\":\"string\",\"required\":true,\"display_order\":30,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"version\"}]},{\"field_id\":\"invocation_status\",\"name\":\"可否调用\",\"meaning\":\"draft为草稿，enabled允许真实调用，disabled禁止调用，able用于候选或模拟；真实执行还须校验调用绑定、约束和DSH权限\",\"data_type\":\"enum\",\"required\":true,\"display_order\":40,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"status\"}],\"enum\":[\"draft\",\"enabled\",\"disabled\",\"able\"],\"suggested_default\":\"draft\"},{\"field_id\":\"developer\",\"name\":\"开发人员\",\"meaning\":\"本AgentVersion的开发人员；多个姓名以顿号分隔\",\"data_type\":\"string\",\"required\":false,\"display_order\":50,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"developer\"}]}]",
+          "name": "身份与治理",
+          "display_order": 10
+        }
+      },
+      {
+        "id": "6:selection_strategy",
+        "label": "FieldGroup",
+        "type": "vertex",
+        "properties": {
+          "group_id": "selection_strategy",
+          "fields_json": "[{\"field_id\":\"selection_policy\",\"name\":\"优选指标\",\"meaning\":\"仅属于本AgentVersion的优选指标、阈值或权重；无依据时缺省，不继承Capability或Agent\",\"data_type\":\"json\",\"required\":false,\"display_order\":10,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"selection_policy_json\"}]}]",
+          "name": "选择策略",
+          "display_order": 50
+        }
+      },
+      {
+        "id": "6:training_evaluation",
+        "label": "FieldGroup",
+        "type": "vertex",
+        "properties": {
+          "group_id": "training_evaluation",
+          "fields_json": "[{\"field_id\":\"performance_evidence\",\"name\":\"性能证据\",\"meaning\":\"性能指标、测试方法及证据引用；无数据时省略\",\"data_type\":\"json\",\"required\":false,\"display_order\":10,\"storage\":[{\"kind\":\"property\",\"vertex_label\":\"AgentVersion\",\"property\":\"performance_evidence_json\"}]}]",
+          "name": "训练与评估",
+          "display_order": 30
+        }
+      },
+      {
+        "id": "av:agent%3Afunctional-logic-completion:v2.0",
+        "label": "AgentVersion",
+        "type": "vertex",
+        "properties": {
+          "description": "根据用户描述的软件系统及需求，结合用例、实体关系与 CRUD 缺口分析进行迭代需求补全，生成软件需求文档。",
+          "version": "v2.0",
+          "status": "enabled",
+          "invoke_kind": "dsh_tool",
+          "dsh_ref": "sf_functional_logic_completion_v2_0",
+          "input_schema": "{\"description\":\"用户自然语言描述的软件系统及需求\",\"x-artifact-kind\":\"text\",\"x-media-type\":\"text/plain\",\"x-required\":true,\"x-allow-blank\":false}",
+          "output_schema": "{\"description\":\"补全后的软件需求文档\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".docx\"}",
+          "performance_evidence_json": "{\"evidence_kind\":\"paper\",\"summary\":\"ICSE 2026《Unlocking the Silent Needs》，实验模型 Qwen3-32B。Table 3：PURE 的 Inventory、WebStore、Email 三个系统，每组运行3次，完整方法汇总 RR=112.9%、DR=125%、HR=0%；RR、DR为相对参考需求及实体数量的完整率，可超过100%。Figure 8：7个案例的平均 CRUD 缺口率 CR 最终为0%，正文报告2至4轮完成。\"}",
+          "constraints_json": "{\"runtime\":\"Python\",\"version\":\"3.12\"}",
+          "model_dependencies_json": "[{\"vendor\":\"DeepSeek\",\"name\":\"deepseek-v4.1-flash\"}]",
+          "object_categories_json": "[\"软件系统及需求描述\",\"软件需求文档\"]",
+          "developer": "吴祝骏、叶博一",
+          "intermediate_artifacts_json": "[{\"description\":\"初始需求分析\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".json\"},{\"description\":\"逐轮检查与补全快照\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".json\"},{\"description\":\"CRUD矩阵及检查结果\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".json\"},{\"description\":\"E-R图源码\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".puml\"},{\"description\":\"用例图源码\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".puml\"}]"
+        }
+      },
+      {
+        "id": "av:agent%3Atraceable-document-preprocessing:0.2.0",
+        "label": "AgentVersion",
+        "type": "vertex",
+        "properties": {
+          "description": "将 PDF、DOCX、XLSX、XLSM 文档或需求文本转换为 Markdown，再执行章节标准化、语义分块、校验、需求目录组织、图片跟随及关系/汇总报告生成；由 DSH 主聊天 Agent 通过 split_requirement_document 等四个业务 Tool 调用，每次任务固定发起会话的工作区与模型，产物写入 <DSH工作区>/outputs/req-split/<runId>/。",
+          "version": "0.2.0",
+          "status": "enabled",
+          "invoke_kind": "dsh_tool",
+          "dsh_ref": "split_requirement_document",
+          "input_schema": "{\"description\":\"PDF、DOCX、XLSX、XLSM文档，或直接提供的需求文本；文件与文本二选一\",\"x-artifact-kind\":[\"file\",\"text\"],\"x-file-extensions\":[\".pdf\",\".docx\",\".xlsx\",\".xlsm\"],\"x-required\":true,\"x-allow-blank\":false}",
+          "output_schema": "{\"description\":\"拆分后的Markdown需求文档及配套材料，以汇总Markdown和ZIP结果包交付\",\"x-artifact-kind\":\"file\",\"x-file-extensions\":[\".md\",\".zip\"]}",
+          "constraints_json": "{\"runtime\":\"Python\",\"version\":\"3.12\",\"ocr\":\"本地 RapidOCR\"}",
+          "model_dependencies_json": "[{\"vendor\":\"DeepSeek\",\"name\":\"deepseek-v4.1-flash\"}]",
+          "object_categories_json": "[\"PDF 文档\",\"DOCX 文档\",\"XLSX 工作簿\",\"XLSM 工作簿\",\"需求文本\"]",
+          "developer": "丁瑞、叶博一、夏伟豪",
+          "intermediate_artifacts_json": "[{\"description\":\"文档转换后的Markdown\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".md\"},{\"description\":\"章节标准化后的Markdown\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".md\"},{\"description\":\"转换清单\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".json\"},{\"description\":\"进度快照\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".json\"},{\"description\":\"模型请求与响应记录\",\"x-artifact-kind\":\"file\",\"x-file-extension\":\".json\"},{\"description\":\"提取的文档图片\",\"x-artifact-kind\":\"file\",\"x-media-type\":\"image/*\"}]"
+        }
+      },
+      {
+        "id": "cap:actual-change-source-identification",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "现实变更源及变更识别"
+        }
+      },
+      {
+        "id": "cap:behavioral-modeling",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "行为建模"
+        }
+      },
+      {
+        "id": "cap:common-support",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "通用支撑能力"
+        }
+      },
+      {
+        "id": "cap:completeness-check",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "完整性检查"
+        }
+      },
+      {
+        "id": "cap:consistency-check",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "一致性检查"
+        }
+      },
+      {
+        "id": "cap:data-modeling",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "数据建模"
+        }
+      },
+      {
+        "id": "cap:functional-modeling",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "功能建模"
+        }
+      },
+      {
+        "id": "cap:historical-requirements-document-processing",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "历史需求文档的处理"
+        }
+      },
+      {
+        "id": "cap:intelligent-analysis",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "智能分析功能"
+        }
+      },
+      {
+        "id": "cap:multi-source-specification-evolution",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "面向多源需求变更的规约演化"
+        }
+      },
+      {
+        "id": "cap:requirements-change-evolution",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "需求变更与演化"
+        }
+      },
+      {
+        "id": "cap:requirements-completion-recommendation",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "需求补全推荐"
+        }
+      },
+      {
+        "id": "cap:requirements-document-generation",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "需求文档生成"
+        }
+      },
+      {
+        "id": "cap:requirements-document-quality-check",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "需求文档质量检查"
+        }
+      },
+      {
+        "id": "cap:requirements-modeling",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "需求建模"
+        }
+      },
+      {
+        "id": "cap:requirements-specification",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "需求规约"
+        }
+      },
+      {
+        "id": "cap:software-factory",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "软件工厂"
+        }
+      },
+      {
+        "id": "cap:software-requirements-development",
+        "label": "Capability",
+        "type": "vertex",
+        "properties": {
+          "name": "软件需求开发"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "S2:agent`:functional-logic-completion>3>3>>Sav:agent%3Afunctional-logic-completion:v2.0",
+        "label": "HAS_VERSION",
+        "type": "edge",
+        "outV": "2:agent`:functional-logic-completion",
+        "outVLabel": "Agent",
+        "inV": "av:agent%3Afunctional-logic-completion:v2.0",
+        "inVLabel": "AgentVersion",
+        "properties": {}
+      },
+      {
+        "id": "S2:agent`:traceable-document-preprocessing>3>3>>Sav:agent%3Atraceable-document-preprocessing:0.2.0",
+        "label": "HAS_VERSION",
+        "type": "edge",
+        "outV": "2:agent`:traceable-document-preprocessing",
+        "outVLabel": "Agent",
+        "inV": "av:agent%3Atraceable-document-preprocessing:0.2.0",
+        "inVLabel": "AgentVersion",
+        "properties": {}
+      },
+      {
+        "id": "Scap:actual-change-source-identification>2>2>>S2:agent`:business-rule-change-identification",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:actual-change-source-identification",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:business-rule-change-identification",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:actual-change-source-identification>2>2>>S2:agent`:external-environment-change-identification",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:actual-change-source-identification",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:external-environment-change-identification",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:actual-change-source-identification>2>2>>S2:agent`:user-requirements-change-identification",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:actual-change-source-identification",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:user-requirements-change-identification",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:behavioral-modeling>2>2>>S2:agent`:activity-diagram-modeling",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:behavioral-modeling",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:activity-diagram-modeling",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:behavioral-modeling>2>2>>S2:agent`:flowchart-generation",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:behavioral-modeling",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:flowchart-generation",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:behavioral-modeling>2>2>>S2:agent`:sequence-diagram-modeling",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:behavioral-modeling",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:sequence-diagram-modeling",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:common-support>2>2>>S2:agent`:io-adaptation",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:common-support",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:io-adaptation",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:common-support>2>2>>S2:agent`:traceable-document-preprocessing",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:common-support",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:traceable-document-preprocessing",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:completeness-check>2>2>>S2:agent`:functional-safety-coverage-check",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:completeness-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:functional-safety-coverage-check",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:completeness-check>2>2>>S2:agent`:functional-scenario-coverage-check",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:completeness-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:functional-scenario-coverage-check",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:completeness-check>2>2>>S2:agent`:information-security-coverage-check",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:completeness-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:information-security-coverage-check",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:completeness-check>2>2>>S2:agent`:performance-coverage-check",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:completeness-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:performance-coverage-check",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:completeness-check>2>2>>S2:agent`:reliability-coverage-check",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:completeness-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:reliability-coverage-check",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:consistency-check>2>2>>S2:agent`:logical-conflict-detection",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:consistency-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:logical-conflict-detection",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:consistency-check>2>2>>S2:agent`:semantic-conflict-detection",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:consistency-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:semantic-conflict-detection",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:data-modeling>2>2>>S2:agent`:entity-relationship-modeling",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:data-modeling",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:entity-relationship-modeling",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:functional-modeling>2>2>>S2:agent`:data-flow-modeling",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:functional-modeling",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:data-flow-modeling",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:functional-modeling>2>2>>S2:agent`:use-case-modeling",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:functional-modeling",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:use-case-modeling",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:historical-requirements-document-processing>1>1>>Scap:requirements-modeling",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:historical-requirements-document-processing",
+        "outVLabel": "Capability",
+        "inV": "cap:requirements-modeling",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:historical-requirements-document-processing>2>2>>S2:agent`:document-parsing",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:historical-requirements-document-processing",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:document-parsing",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:historical-requirements-document-processing>2>2>>S2:agent`:document-splitting",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:historical-requirements-document-processing",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:document-splitting",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:historical-requirements-document-processing>2>2>>S2:agent`:high-level-software-requirements-traceability-network",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:historical-requirements-document-processing",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:high-level-software-requirements-traceability-network",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:historical-requirements-document-processing>2>2>>S2:agent`:invalid-content-filtering",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:historical-requirements-document-processing",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:invalid-content-filtering",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:historical-requirements-document-processing>2>2>>S2:agent`:requirements-information-extraction-fusion",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:historical-requirements-document-processing",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:requirements-information-extraction-fusion",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:historical-requirements-document-processing>2>2>>S2:agent`:requirements-relationship-identification",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:historical-requirements-document-processing",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:requirements-relationship-identification",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:historical-requirements-document-processing>2>2>>S2:agent`:terminology-unification",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:historical-requirements-document-processing",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:terminology-unification",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:intelligent-analysis>1>1>>Scap:historical-requirements-document-processing",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:intelligent-analysis",
+        "outVLabel": "Capability",
+        "inV": "cap:historical-requirements-document-processing",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:intelligent-analysis>1>1>>Scap:requirements-change-evolution",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:intelligent-analysis",
+        "outVLabel": "Capability",
+        "inV": "cap:requirements-change-evolution",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:intelligent-analysis>1>1>>Scap:software-requirements-development",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:intelligent-analysis",
+        "outVLabel": "Capability",
+        "inV": "cap:software-requirements-development",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:multi-source-specification-evolution>2>2>>S2:agent`:business-rule-driven-specification-evolution",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:multi-source-specification-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:business-rule-driven-specification-evolution",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:multi-source-specification-evolution>2>2>>S2:agent`:environment-driven-specification-evolution",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:multi-source-specification-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:environment-driven-specification-evolution",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:multi-source-specification-evolution>2>2>>S2:agent`:user-requirements-driven-specification-evolution",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:multi-source-specification-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:user-requirements-driven-specification-evolution",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-change-evolution>1>1>>Scap:actual-change-source-identification",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:requirements-change-evolution",
+        "outVLabel": "Capability",
+        "inV": "cap:actual-change-source-identification",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-change-evolution>1>1>>Scap:multi-source-specification-evolution",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:requirements-change-evolution",
+        "outVLabel": "Capability",
+        "inV": "cap:multi-source-specification-evolution",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-change-evolution>2>2>>S2:agent`:baseline-management",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-change-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:baseline-management",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-change-evolution>2>2>>S2:agent`:change-impact-analysis",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-change-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:change-impact-analysis",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-change-evolution>2>2>>S2:agent`:change-tracking",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-change-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:change-tracking",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-change-evolution>2>2>>S2:agent`:difference-comparison",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-change-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:difference-comparison",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-change-evolution>2>2>>S2:agent`:document-based-potential-change-source",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-change-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:document-based-potential-change-source",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-change-evolution>2>2>>S2:agent`:multi-source-specification-change-merge",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-change-evolution",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:multi-source-specification-change-merge",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-completion-recommendation>2>2>>S2:agent`:exception-scenario-completion",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-completion-recommendation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:exception-scenario-completion",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-completion-recommendation>2>2>>S2:agent`:functional-logic-completion",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-completion-recommendation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:functional-logic-completion",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-completion-recommendation>2>2>>S2:agent`:human-safety-requirements-completion",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-completion-recommendation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:human-safety-requirements-completion",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-completion-recommendation>2>2>>S2:agent`:information-security-requirements-completion",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-completion-recommendation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:information-security-requirements-completion",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-completion-recommendation>2>2>>S2:agent`:reliability-requirements-completion",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-completion-recommendation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:reliability-requirements-completion",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-document-generation>2>2>>S2:agent`:document-content-generation",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-document-generation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:document-content-generation",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-document-generation>2>2>>S2:agent`:document-format-polishing",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-document-generation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:document-format-polishing",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-document-generation>2>2>>S2:agent`:document-structure-completion",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-document-generation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:document-structure-completion",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-document-generation>2>2>>S2:agent`:document-structure-planning",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-document-generation",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:document-structure-planning",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-document-quality-check>1>1>>Scap:completeness-check",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:requirements-document-quality-check",
+        "outVLabel": "Capability",
+        "inV": "cap:completeness-check",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-document-quality-check>1>1>>Scap:consistency-check",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:requirements-document-quality-check",
+        "outVLabel": "Capability",
+        "inV": "cap:consistency-check",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-document-quality-check>2>2>>S2:agent`:f36-review-assistant",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-document-quality-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:f36-review-assistant",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-document-quality-check>2>2>>S2:agent`:f37-compliance-review",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-document-quality-check",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:f37-compliance-review",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-modeling>1>1>>Scap:behavioral-modeling",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:requirements-modeling",
+        "outVLabel": "Capability",
+        "inV": "cap:behavioral-modeling",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-modeling>1>1>>Scap:data-modeling",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:requirements-modeling",
+        "outVLabel": "Capability",
+        "inV": "cap:data-modeling",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-modeling>1>1>>Scap:functional-modeling",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:requirements-modeling",
+        "outVLabel": "Capability",
+        "inV": "cap:functional-modeling",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-specification>2>2>>S2:agent`:business-rules-to-software-requirements",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-specification",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:business-rules-to-software-requirements",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-specification>2>2>>S2:agent`:feedforward-feedback-fdir-requirements",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-specification",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:feedforward-feedback-fdir-requirements",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-specification>2>2>>S2:agent`:system-requirements-to-software-requirements",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-specification",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:system-requirements-to-software-requirements",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:requirements-specification>2>2>>S2:agent`:user-requirements-to-software-requirements",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:requirements-specification",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:user-requirements-to-software-requirements",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:software-factory>1>1>>Scap:common-support",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:software-factory",
+        "outVLabel": "Capability",
+        "inV": "cap:common-support",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:software-factory>1>1>>Scap:intelligent-analysis",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:software-factory",
+        "outVLabel": "Capability",
+        "inV": "cap:intelligent-analysis",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:software-requirements-development>1>1>>Scap:requirements-completion-recommendation",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:software-requirements-development",
+        "outVLabel": "Capability",
+        "inV": "cap:requirements-completion-recommendation",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:software-requirements-development>1>1>>Scap:requirements-document-generation",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:software-requirements-development",
+        "outVLabel": "Capability",
+        "inV": "cap:requirements-document-generation",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:software-requirements-development>1>1>>Scap:requirements-document-quality-check",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:software-requirements-development",
+        "outVLabel": "Capability",
+        "inV": "cap:requirements-document-quality-check",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:software-requirements-development>1>1>>Scap:requirements-specification",
+        "label": "HAS_CHILD",
+        "type": "edge",
+        "outV": "cap:software-requirements-development",
+        "outVLabel": "Capability",
+        "inV": "cap:requirements-specification",
+        "inVLabel": "Capability",
+        "properties": {}
+      },
+      {
+        "id": "Scap:software-requirements-development>2>2>>S2:agent`:requirements-clarification",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:software-requirements-development",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:requirements-clarification",
+        "inVLabel": "Agent",
+        "properties": {}
+      },
+      {
+        "id": "Scap:software-requirements-development>2>2>>S2:agent`:requirements-extraction",
+        "label": "HAS_AGENT",
+        "type": "edge",
+        "outV": "cap:software-requirements-development",
+        "outVLabel": "Capability",
+        "inV": "2:agent`:requirements-extraction",
+        "inVLabel": "Agent",
+        "properties": {}
+      }
+    ]
+  }
+}
