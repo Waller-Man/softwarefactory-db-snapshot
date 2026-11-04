@@ -1,9 +1,11 @@
 {
   "name": "softwarefactory-database-snapshot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=24" },
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "info": "node scripts/snapshot.ts info",
     "check": "node scripts/snapshot.ts check",

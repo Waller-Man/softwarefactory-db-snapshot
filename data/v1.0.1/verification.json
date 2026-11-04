@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "completedAt": "2026-11-04T03:54:36.681Z",
+  "source": {
+    "endpoint": "http://127.0.0.1:18080",
+    "graph": "/graphspaces/DEFAULT/graphs/hugegraph",
+    "serverVersionDeclared": "1.7.0"
+  },
+  "counts": {
+    "schema": {
+      "propertykeys": 21,
+      "vertexlabels": 4,
+      "edgelabels": 3,
+      "indexlabels": 3
+    },
+    "vertices": {
+      "Agent": 53,
+      "AgentVersion": 6,
+      "Capability": 19,
+      "FieldGroup": 8
+    },
+    "edges": {
+      "HAS_AGENT": 53,
+      "HAS_CHILD": 18,
+      "HAS_VERSION": 6
+    },
+    "totalVertices": 86,
+    "totalEdges": 77,
+    "fieldGroups": 8,
+    "fieldDefinitions": 19
+  },
+  "dataSha256": "5f37c3f7264edd369c14549085e5c8260269dc39e21f789af96fb0d13ce56564",
+  "fileSha256": "3692afa8acd098aa93d40b6dbae781a475ab9eb1feb0b2ec1e352e638e8d1527",
+  "bytes": 87160,
+  "checks": {
+    "exportUsedGetOnly": true,
+    "consecutiveCompleteReadsMatched": true,
+    "uniqueVertexAndEdgeIds": true,
+    "allEdgeEndpointsPresent": true,
+    "allEndpointLabelsMatchSchema": true,
+    "backupReadbackAndChecksum": true
+  },
+  "restoreTesting": "Not restored to a live database; importer is tested with a simulated API."
+}

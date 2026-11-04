@@ -1,0 +1,50 @@
+{
+  "version": "1.0.1",
+  "verifiedAt": "2026-11-04T03:56:10.382Z",
+  "snapshot": "data/v1.0.1/graph-backup.json",
+  "fileSha256": "3692afa8acd098aa93d40b6dbae781a475ab9eb1feb0b2ec1e352e638e8d1527",
+  "counts": {
+    "schema": {
+      "propertykeys": 21,
+      "vertexlabels": 4,
+      "edgelabels": 3,
+      "indexlabels": 3
+    },
+    "vertices": {
+      "Agent": 53,
+      "AgentVersion": 6,
+      "Capability": 19,
+      "FieldGroup": 8
+    },
+    "edges": {
+      "HAS_AGENT": 53,
+      "HAS_CHILD": 18,
+      "HAS_VERSION": 6
+    },
+    "totalVertices": 86,
+    "totalEdges": 77,
+    "fieldGroups": 8,
+    "fieldDefinitions": 19
+  },
+  "sourceExport": {
+    "consecutiveCompleteReadsMatched": true,
+    "checksumVerified": true,
+    "writes": 0
+  },
+  "automatedTests": {
+    "command": "SOFTWAREFACTORY_BACKUP_TEST_FILE=data/v1.0.1/graph-backup.json node --test scripts/backup-restore.test.ts",
+    "passed": 7,
+    "failed": 0,
+    "actualSnapshotSimulatedRestorePassed": true,
+    "repeatedImportWrites": 0
+  },
+  "historicalSnapshot": {
+    "file": "data/current/graph-backup.json",
+    "unchanged": true
+  },
+  "limitations": [
+    "未在第二个真实 HugeGraph 实例执行恢复",
+    "导出不是事务级原子快照",
+    "不包含数据库认证配置、DSH 插件或工作区执行文件"
+  ]
+}
