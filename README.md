@@ -19,7 +19,7 @@ cd "D:\桌面\软件工厂\数据库快照"
 复制下面这行，粘贴到 PowerShell 后按回车：
 
 ```powershell
-.\导入快照.ps1 -Url http://127.0.0.1:18080 -File .\data\v1.0.1\graph-backup.json -Apply
+.\导入快照.ps1 -Url http://127.0.0.1:18080 -File .\data\v1.0.2\graph-backup.json -Apply
 ```
 
 然后按提示操作：
@@ -34,14 +34,14 @@ cd "D:\桌面\软件工厂\数据库快照"
 3. 输入数据库密码，密码会隐藏。
 4. 等待完成，看到 `success: true` 就表示导入并回读验证成功。
 
-以上命令导入最新的 `data/v1.0.1/graph-backup.json`，自动创建缺失的 Schema、节点和关系。建议导入新空库；一致的数据跳过，有冲突就停止，不会覆盖或删除旧数据。地址改了，确认文字中的地址也要跟着改。
+以上命令导入最新的 `data/v1.0.2/graph-backup.json`，自动创建缺失的 Schema、节点和关系。建议导入新空库；一致的数据跳过，有冲突就停止，不会覆盖或删除旧数据。地址改了，确认文字中的地址也要跟着改。
 
 不传 `-File` 时，脚本仍读取首次快照 `data/current/graph-backup.json`；旧快照保留不覆盖。
 
 **如果只想先检查、暂时不导入，输入这一行：**
 
 ```powershell
-.\导入快照.ps1 -Url http://127.0.0.1:18080 -File .\data\v1.0.1\graph-backup.json
+.\导入快照.ps1 -Url http://127.0.0.1:18080 -File .\data\v1.0.2\graph-backup.json
 ```
 
 它只检查，不写入数据库；没有报错后，再运行带 `-Apply` 的命令。
@@ -76,11 +76,19 @@ cd "D:\桌面\软件工厂\数据库快照"
   ```
 
 
-当前最新快照：**86 个节点、77 条边**，位于 [data/v1.0.1/](data/v1.0.1/)。数据库结构见[数据库说明](docs/数据库说明.md)，本次验证见[验证记录](data/v1.0.1/validation.json)。
+最新快照含 **101 个节点、91 条关系**，保存在 [data/v1.0.2/](data/v1.0.2/)。详见[数据库说明](docs/数据库说明.md)和[验证记录](data/v1.0.2/validation.json)。
 
 ## 五、版本与更新记录
 
-**当前仓库版本：v1.0.1**（对应 `package.json`；HugeGraph 数据库服务版本为 **1.7.0**）。
+**当前仓库版本：v1.0.2**（对应 `package.json`；HugeGraph 数据库服务版本为 **1.7.0**）。
+
+**v1.0.2 · 2026-11-23**
+
+- 收录 11 月 21 日导出的快照，11 月 23 日与本机 HugeGraph 完整读回结果一致。
+- 共 20 个能力分类、59 个 Agent、13 个 Agent 版本、8 个字段分组和 1 个公共配置节点。
+- 新增机载需求检测、CARE、两条需求分析流水线、用例模型打分、TAP 规则仿真，以及现有 FDIR 节点下的 SEDAM v1.0。
+- 新增「测试用例生成」分支、版本数据集字段和公共数据集路径。快照保存路径，数据集文件需要另行复制。
+- 保留 `data/current/` 和 `data/v1.0.1/`，新导入命令显式选择 `data/v1.0.2/`。
 
 **v1.0.1 · 2026-11-04**
 
@@ -95,4 +103,4 @@ cd "D:\桌面\软件工厂\数据库快照"
 - 包含当前数据库快照：79 个节点、70 条边，8 类分组、19 项字段定义。
 - 提供简明使用说明和数据库结构说明。
 
-数据库快照 JSON 及配套文件会随代码一起提交。发布当前版本的 Release 时，请将 `data/v1.0.1/` 下的 **JSON、`.sha256` 校验文件和 `verification.json`** 一起上传，下载后放在同一个文件夹中。
+从 [GitHub Release](https://github.com/Waller-Man/softwarefactory-db-snapshot/releases/tag/v1.0.2) 下载时，将 `graph-backup.json` 和 `graph-backup.json.sha256` 放在同一个目录，再用 `-File` 选择该 JSON 文件。
